@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargement de fichier</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: violet;
+        }
+        a {
+            color: violet;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 20px 0;
+            display: inline-block;
+            border: 2px solid violet;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background-color: violet;
+            color: black;
+        }
+        button {
+            background-color: violet;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: white;
+            color: violet;
+        }
+    </style>
+</head>
+<body>
+    <h2>Merci pour votre achat ! 💜<h2>
+    <h3>Téléchargement de votre fichier</h3>
+    <p>Cliquez sur le bouton ci-dessous pour télécharger votre pack de formations.</p>
+    
+    <!-- Lien de téléchargement -->
+    <a href="https://mega.nz/folder/iYpUQDQD#jbxno1QHDZLp8JZO5VXw2g/folder/qAIFnCBB" download>Télécharger le fichier</a>
+    <p> Voici le lien de  votre pack de formations ci-dessous ! Veuillez la copier et la coller dans un lieu sûr afin de ne pas le perdre. Vous pouvez aussi télécharger tout le pack si vous le souhaitez. N'oubliez pas de recommander notre site à vos proches. Merci et bon changement positif et global dans votre vie !💜<p>
+    
+    <!-- Bouton pour copier le lien -->
+    <p id="link" style="display:none;">votre-lien-de-fichier</p>
+    <button onclick="copyLink()">Copier le lien</button>
+
+    <!-- Script pour copier le lien -->
+    <script>
+        function copyLink() {
+            const link = "https://mega.nz/folder/iYpUQDQD#jbxno1QHDZLp8JZO5VXw2g/folder/qAIFnCBB";
+            navigator.clipboard.writeText(link).then(() => {
+                alert("Lien copié dans le presse-papiers !");
+            }).catch(err => {
+                alert("Impossible de copier le lien.");
+                console.error("Erreur:", err);
+            });
+        }
+    </script>
+</body>
+</html>
